@@ -8,6 +8,9 @@ public class Paddle : MonoBehaviour
     public int numInt = 8;
     public float numF = 8f;
 
+    public KeyCode upKey;
+    public KeyCode downKey;
+
     private float speed = 3.5f; // For floats, add the f at the end
 
 
@@ -27,12 +30,12 @@ public class Paddle : MonoBehaviour
         If the player presses down, move the paddle down
         */
         
-        if (Input.GetKey(KeyCode.W)) {
+        if (Input.GetKey(upKey)) {
             // lowercase t transform = this object's transform
             // uppercase t Transform = the entire Transform class
             transform.Translate(Vector2.up * Time.deltaTime * speed);
         }
-        if (Input.GetKey(KeyCode.S)) {
+        if (Input.GetKey(downKey)) {
             transform.Translate(Vector2.down * Time.deltaTime * speed);
         }
     }
