@@ -8,7 +8,6 @@ public class Ball : MonoBehaviour
     // Store the ball's direction
     Vector2 dir;
     float speed = 4f;
-    
 
     // Start is called before the first frame update
     void Start()
@@ -38,8 +37,6 @@ public class Ball : MonoBehaviour
         if (coll.gameObject.tag.Equals("Wall")) {
             dir.y = -dir.y;
         }
-        
-        
     }
 
     void OnTriggerEnter2D (Collider2D trig) {
